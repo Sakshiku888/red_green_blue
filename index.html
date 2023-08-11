@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<style>
+    #main {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .colorSquare {
+        width: 200px;
+        height: 200px;
+        cursor: pointer;
+        margin: 10px;
+    }
+
+
+    .bl {
+        background-color: blue;
+    }
+
+    .re {
+        background-color: red;
+    }
+
+    .gr {
+        background-color: greenyellow;
+    }
+</style>
+
+<body>
+    <div id="main">
+        <button class="bl colorSquare" value="blue"> click</button>
+        <button class="re colorSquare" value="red"> click</button>
+        <button class="gr colorSquare" value="green"> click</button>
+        <button id="clear game" onclick=" clearScores()">clear game</button>
+    </div>
+
+    <script>
+        let a = document.querySelectorAll(".colorSquare")
+
+        const timeClicked = {
+            blue: 0,
+            red: 0,
+            green: 0
+        };
+
+        a.forEach((element) => {
+            element.onclick = () => {
+                let c = (timeClicked[element.value] += 1);
+                element.innerHTML = c;
+
+            };
+        });
+
+        function clearScores() {
+            a.forEach((element) => {
+                let c = (timeClicked[element.value] = 0);
+                element.innerHTML = "click ";
+
+            });
+        }
+
+        
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+
+
+
+
+
+</html>
